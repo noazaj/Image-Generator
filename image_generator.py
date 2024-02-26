@@ -7,7 +7,7 @@ app = Flask(__name__)
 # The paths for the images
 IMAGES_DIR = 'imagesAll'
 
-@app.route('/random_character', methods=['GET'])
+@app.route('/random-character', methods=['GET'])
 def random_character():
     try:
         image_name = random.choice(os.listdir(IMAGES_DIR))
