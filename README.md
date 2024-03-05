@@ -14,7 +14,7 @@ No specific prerequisites are required to use this service. However, to interact
 
 ### Requesting Data
 
-To request a random Pokémon image, send a `GET` request to the following endpoint:
+To request a random image, send a `GET` request to the following endpoint:
 
 ```
 https://microservice-image-generator-bd1f70093a8a.herokuapp.com/random-image
