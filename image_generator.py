@@ -11,6 +11,8 @@ IMAGES_DIR = 'unsplash-images-collection'
 def random_character():
     try:
         image_name = random.choice(os.listdir(IMAGES_DIR))
-        return send_from_directory(IMAGES_DIR, image_name)
+        response = send_from_directory(IMAGES_DIR, image_name)
+        response.headers['Content-Disposition'] = 'attachment; filename="image_name.jpg"'
+        return response
     except Exception as err:
         return abort(404, description=str(err))

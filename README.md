@@ -14,7 +14,7 @@ No specific prerequisites are required to use this service. However, to interact
 
 ### Requesting Data
 
-To request a random Pokémon image, send a `GET` request to the following endpoint:
+To request a random image, send a `GET` request to the following endpoint:
 
 ```
 https://microservice-image-generator-bd1f70093a8a.herokuapp.com/random-image
@@ -24,7 +24,18 @@ https://microservice-image-generator-bd1f70093a8a.herokuapp.com/random-image
 
 ##### Curl
 
-Using curl: ```curl https://microservice-image-generator-bd1f70093a8a.herokuapp.com/random-image --output random_image.jpg```
+Using curl: 
+
+The first option saves the file to the local directory with the same name as the remote file. The second option will give the user the option to name the image that is being downloaded.
+
+```
+curl -O https://microservice-image-generator-bd1f70093a8a.herokuapp.com/random-image
+```
+
+```
+curl -o my_image.jpg https://microservice-image-generator-bd1f70093a8a.herokuapp.com/random-image
+
+```
 
 The image will be saved to the current working directory when the command is executed.
 
